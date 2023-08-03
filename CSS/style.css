@@ -497,9 +497,9 @@ body{
         font-size: 14px;
     }
     .side-nav button{
-        width: 50%;
-        margin-left: 40px;
-        padding: 8px 15px;
+        width: 100px;
+        margin-left: 30px;
+        padding: 8px 0;
     }
     .side-nav .details{
         margin-top: 30px;
