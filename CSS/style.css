@@ -1,0 +1,525 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    position: relative;
+}
+.pageTitle{
+    width: 98%;
+    margin: 15px 12px;
+    height: 80px;
+    background-color: rgb(26, 24, 24);
+    color: white;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.side-nav{
+    width: 18%;
+    height: 75vh;
+    margin-top: 130px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px 0;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(26, 24, 24);
+    color: white;
+}
+
+.side-nav .profile{
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-nav .profile img{
+    border-radius: 100%;
+    border: 1px solid white;
+}
+.side-nav .name{
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.side-nav button{
+    width: 70%;
+    padding: 8px 25px;
+    font-size: 13px;
+    margin-left: 35px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(252, 67, 65);
+}
+.side-nav button:hover{
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+}
+.side-nav .details{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+.side-nav ul{
+    margin-top: 30px;
+}
+.side-nav ul li{
+    font-size: 15px;
+    list-style: none;
+    margin-left: 20px;
+}
+.side-nav ul .Item{
+    margin-bottom: 30px;
+}
+.side-nav .mobile{
+    display: none;
+}
+.side-nav .end-info{
+    margin-top: 40px;
+    font-size: 9px;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+.gallery{
+    width: 100%;
+    height: auto;
+    /* background: linear-gradient(275deg, rgb(46, 0, 41), rgb(0, 0, 0)); */
+    padding-left: 8%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-top: 2.5%;
+}
+
+
+/* 2ND POSTER SECTION STARTS */
+.gallery .posters2{
+    width: 85%;
+    height: 26vh;
+    margin-top: 100px;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.gallery .posters2 .poster1{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/Stanmarx\ \(127\).jpg);
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box1:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .info{
+    color: black;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+}
+.gallery .posters2 .saved{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.gallery .posters2 .saved i{
+    color: rgb(242, 245, 247);
+    font-size: 18px;
+}
+/* 2nd poster */
+.gallery .posters2 .poster2{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/mortal_kombat_movie_poster\ \(2\).png);
+    background-size: cover;
+    background-position: right;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box2:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 3rd poster */
+.gallery .posters2 .poster3{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/img1.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box3:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 4th poster */
+.gallery .posters2 .poster4{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/God\ of\ war.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box4:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 5th poster */
+.gallery .posters2 .poster5{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/call\ of\ duty1.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box5:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 6th poster */
+.gallery .posters2 .poster6{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/12732.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box6:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 7th poster */
+.gallery .posters2 .poster7{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/1920-1200-388492.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box7:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 8th poster */
+.gallery .posters2 .poster8{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/9851.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box8:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* 9th poster */
+.gallery .posters2 .poster9{
+    height: 25vh;
+    padding: 10px;
+    background: url(../IMG/1493.jpg);
+    background-size: cover;
+    background-position: top left;
+    border-radius: 5px;
+    position: relative;
+    z-index: 4;
+}
+.gallery .posters2 #box9:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.gallery .posters2 .post-holder .mv-desc{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc p{
+    color: rgb(242, 245, 247);
+    font-size: 13px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+.gallery .posters2 .post-holder .mv-desc .movie{
+    font-size: 19px;
+    font-weight: bold;
+}
+/* FOR IPAD AIR */
+@media screen and (max-width: 1025px) {
+    body{
+        padding: 20px;
+    }
+    .pageTitle{
+        width: 93%;
+        margin-right: 15px;
+        margin-left: 10px;
+        height: 80px;
+        background-color: rgb(26, 24, 24);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .side-nav{
+        width: 30%;
+        height: 80vh;
+        margin-top: 140px;
+        margin-bottom: 50px;
+    }
+    .side-nav .profile{
+        margin-top: 70px;
+    }
+    .side-nav .details{
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .side-nav .end-info{
+        width: 80%;
+        position: absolute;
+        bottom: 30px;
+        font-size: 10px;
+    }
+    .gallery .posters2{
+        width: 68%;
+        margin-top: 120px;
+        margin-left: 32%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery .posters2 #box9{
+        display: none;
+    }
+
+}
+/* FOR IPAD MOBILE VIEW */
+@media screen and (max-width: 480px) {
+    .pageTitle{
+        width: 89%;
+        margin-right: 15px;
+        margin-left: 0px;
+        height: 70px;
+        font-size: 13px;
+    }
+    .side-nav{
+        width: 40%;
+        height: 75vh;
+        margin-top: 120px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .side-nav .profile{
+        margin-top: 50px;
+    }
+    .side-nav button{
+        width: 55%;
+        padding: 8px 15px;
+    }
+    .side-nav .details{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .side-nav ul{
+        display: none;
+    }
+    .side-nav ul .dash{
+        display: none;
+    }
+    .side-nav .mobile{
+        display: block;
+    }
+    .side-nav .end-info{
+        font-size: 8px;
+        bottom: 10px;
+    }
+    .gallery .posters2{
+        width: 55%;
+        margin-top: 110px;
+        margin-left: 45%;
+        grid-template-columns: 1fr;
+    }
+    .gallery .posters2 #box5{
+        display: none;
+    }
+    .gallery .posters2 #box6{
+        display: none;
+    }
+}

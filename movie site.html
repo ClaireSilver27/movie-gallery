@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid gallery</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/font-awesome.min.css">
+</head>
+<body>
+    <div class="pageTitle">
+        <h1>Movie Gallery</h1>
+    </div>
+    <div class="side-nav"> 
+        <div class="profile">
+            <img src="./IMG/Feelins Matte Lipstick2.jpeg" width="80px">
+        </div>
+        <p class="name">Feelins Matte</p>
+        <button>Log Out</button>
+        <p class="details">Movie Details</p>
+        <ul>
+            <li class="Item" id="movieName">Movie Title: <span class="dash" id="dash">_ _ _ _ _ _ _ _ _</span></li>
+            <li class="Item" id="movieDate">Date Released: <span class="dash" id="dash">_ _ _ _ _ _ _</span> </li>
+            <li class="Item" id="movieCategory">Category: <span class="dash" id="dash">_ _ _ _ _ _ _ _ _ _</span></li>
+        </ul>
+        <ul class="mobile">
+            <li class="Item" id="movieNameM">Movie Title: </li>
+            <li class="Item" id="movieDateM">Date Released: </li>
+            <li class="Item" id="movieCategoryM">Category: </li>
+        </ul>
+        <span class="end-info">Powered by FavouriteMovies @ 2023</span>
+    </div>
+    <div class="gallery">
+        <!-- 2ND SECTION STARTS -->
+        <div class="posters2">
+            <div class="post-holder" id="box1">
+                <div class="poster1">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Beyond Earth</p>
+                </div>
+            </div>
+            <div class="post-holder"id="box2" >
+                <div class="poster2">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Mortal Combat</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box3">
+                <div class="poster3">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Bleach</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box4">
+                <div class="poster4">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">God of War</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box5">
+                <div class="poster5">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Call of Duty</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box6">
+                <div class="poster6">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Hidden Fang</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box7">
+                <div class="poster7">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">The Unknown</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box8">
+                <div class="poster8">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Serene</p>
+                </div>
+            </div>
+            <div class="post-holder" id="box9">
+                <div class="poster9">
+                    <div class="saved"><i class="fa fa-bookmark-o"></i></div>
+                </div>
+                <div class="mv-desc">
+                    <p class="info">2019  .  <i class="fa fa-film"></i> Movie  .  PG</p>
+                    <p class="movie">Battle Angel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        // box1
+        let filmName = document.getElementById('movieName');
+        let filmDate = document.getElementById('movieDate');
+        let filmCategory = document.getElementById('movieCategory');
+
+        let nameText = filmName.textContent;
+        let dateText = filmDate.textContent;
+        let categoryText = filmCategory.textContent;
+
+        // box1 mobile
+        let filmNameM = document.getElementById('movieNameM');
+        let filmDateM = document.getElementById('movieDateM');
+        let filmCategoryM = document.getElementById('movieCategoryM');
+        
+        let nameTextM = filmNameM.textContent;
+        let dateTextM = filmDateM.textContent;
+        let categoryTextM = filmCategoryM.textContent;
+
+
+        let filmDetails = {name:'Movie Title: Beyond Earth', date:'Date Released: 21/03/19', category:'Category: Thriller'};
+
+        box1.addEventListener('mousemove',() => {
+            filmName.innerHTML = filmDetails.name;
+            filmDate.innerHTML = filmDetails.date;
+            filmCategory.innerHTML = filmDetails.category;
+
+            filmName.style.color = 'rgb(252, 67, 65)';
+            filmDate.style.color = 'white';
+            filmCategory.style.color = 'white';
+
+            // for mobile
+            filmNameM.innerHTML = filmDetails.name;
+            filmDateM.innerHTML = filmDetails.date;
+            filmCategoryM.innerHTML = filmDetails.category;
+
+            filmNameM.style.color = 'rgb(252, 67, 65)';
+            filmDateM.style.color = 'white';
+            filmCategoryM.style.color = 'white';
+        })
+
+        box1.addEventListener('mouseleave',() => {
+            filmName.innerHTML = nameText;
+            filmDate.innerHTML = dateText;
+            filmCategory.innerHTML = categoryText;
+
+            filmName.style.color = 'white';
+            filmDate.style.color = 'white';
+            filmCategory.style.color = 'white';
+
+            // for mobile
+            filmNameM.innerHTML = nameTextM;
+            filmDateM.innerHTML = dateTextM;
+            filmCategoryM.innerHTML = categoryTextM;
+
+            filmNameM.style.color = 'white';
+            filmDateM.style.color = 'white';
+            filmCategoryM.style.color = 'white';
+            
+        })
+
+
+        // box2
+        let filmName2 = document.getElementById('movieName');
+        let filmDate2 = document.getElementById('movieDate');
+        let filmCategory2 = document.getElementById('movieCategory');
+        
+        let nameText2 = filmName2.textContent;
+        let dateText2 = filmDate2.textContent;
+        let CategoryText2 = filmCategory2.textContent;
+
+        // box2 mobile
+        let filmNameM2 = document.getElementById('movieNameM');
+        let filmDateM2 = document.getElementById('movieDateM');
+        let filmCategoryM2 = document.getElementById('movieCategoryM');
+        
+        let nameTextM2 = filmNameM2.textContent;
+        let dateTextM2 = filmDateM2.textContent;
+        let categoryTextM2 = filmCategoryM2.textContent;
+
+        let filmDetail2 = {name:'Movie Title: Mortal Combat', date:'Date Released: 21/03/16', category:'Category: Action'};
+
+        box2.addEventListener('mousemove',() => {
+            filmName2.innerHTML = filmDetail2.name;
+            filmDate2.innerHTML = filmDetail2.date;
+            filmCategory2.innerHTML = filmDetail2.category;
+
+            filmName2.style.color = 'rgb(252, 67, 65)';
+            filmDate2.style.color = 'white';
+            filmCategory2.style.color = 'white';
+
+            // for mobile
+            filmNameM2.innerHTML = filmDetail2.name;
+            filmDateM2.innerHTML = filmDetail2.date;
+            filmCategoryM2.innerHTML = filmDetail2.category;
+
+            filmNameM2.style.color = 'rgb(252, 67, 65)';
+            filmDateM2.style.color = 'white';
+            filmCategoryM2.style.color = 'white';
+        })
+
+        box2.addEventListener('mouseleave',() => {
+            filmNameM2.innerHTML = nameTextM2;
+            filmDateM2.innerHTML = dateTextM2;
+            filmCategoryM2.innerHTML = categoryTextM2;
+
+            filmNameM2.style.color = 'white';
+            filmDateM2.style.color = 'white';
+            filmCategoryM2.style.color = 'white';
+
+            // for mobile
+            filmNameM2.innerHTML = nameTextM2;
+            filmDateM2.innerHTML = dateTextM2;
+            filmCategoryM2.innerHTML = categoryTextM2;
+
+            filmNameM2.style.color = 'white';
+            filmDateM2.style.color = 'white';
+            filmCategoryM2.style.color = 'white';
+        })
+
+
+        // box3
+        let filmName3 = document.getElementById('movieName');
+        let filmDate3 = document.getElementById('movieDate');
+        let filmCategory3 = document.getElementById('movieCategory');
+        
+        let nameText3 = filmName3.textContent;
+        let dateText3 = filmDate3.textContent;
+        let CategoryText3 = filmCategory3.textContent;
+
+        // box3 mobile
+        let filmNameM3 = document.getElementById('movieNameM');
+        let filmDateM3 = document.getElementById('movieDateM');
+        let filmCategoryM3 = document.getElementById('movieCategoryM');
+        
+        let nameTextM3 = filmNameM3.textContent;
+        let dateTextM3 = filmDateM3.textContent;
+        let categoryTextM3 = filmCategoryM3.textContent;
+
+        let filmDetail3 = {name:'Movie Title: Bleach', date:'Date Released: 01/06/18', category:'Category: Action'};
+
+        box3.addEventListener('mousemove',() => {
+            filmName3.innerHTML = filmDetail3.name;
+            filmDate3.innerHTML = filmDetail3.date;
+            filmCategory3.innerHTML = filmDetail3.category;
+
+            filmName3.style.color = 'rgb(252, 67, 65)';
+            filmDate3.style.color = 'white';
+            filmCategory3.style.color = 'white';
+
+            // for mobile
+            filmNameM3.innerHTML = filmDetail3.name;
+            filmDateM3.innerHTML = filmDetail3.date;
+            filmCategoryM3.innerHTML = filmDetail3.category;
+
+            filmNameM3.style.color = 'rgb(252, 67, 65)';
+            filmDateM3.style.color = 'white';
+            filmCategoryM3.style.color = 'white';
+        })
+
+        box3.addEventListener('mouseleave',() => {
+            filmName3.innerHTML = nameText3;
+            filmDate3.innerHTML = dateText3;
+            filmCategory3.innerHTML = CategoryText3;
+
+            filmName3.style.color = 'white';
+            filmDate3.style.color = 'white';
+            filmCategory3.style.color = 'white';
+
+            // for mobile
+            filmNameM3.innerHTML = nameTextM3;
+            filmDateM3.innerHTML = dateTextM3;
+            filmCategoryM3.innerHTML = categoryTextM3;
+
+            filmNameM3.style.color = 'white';
+            filmDateM3.style.color = 'white';
+            filmCategoryM3.style.color = 'white';
+        })
+
+
+        // box4
+        let filmName4 = document.getElementById('movieName');
+        let filmDate4 = document.getElementById('movieDate');
+        let filmCategory4 = document.getElementById('movieCategory');
+        
+        let nameText4 = filmName4.textContent;
+        let dateText4 = filmDate4.textContent;
+        let CategoryText4 = filmCategory4.textContent;
+
+        // box4 mobile
+        let filmNameM4 = document.getElementById('movieNameM');
+        let filmDateM4 = document.getElementById('movieDateM');
+        let filmCategoryM4 = document.getElementById('movieCategoryM');
+        
+        let nameTextM4 = filmNameM4.textContent;
+        let dateTextM4 = filmDateM4.textContent;
+        let categoryTextM4 = filmCategoryM4.textContent;
+
+        let filmDetail4 = {name:'Movie Title: God of War', date:'Date Released: 21/03/16', category:'Category: Action'};
+
+        box4.addEventListener('mousemove',() => {
+            filmName4.innerHTML = filmDetail4.name;
+            filmDate4.innerHTML = filmDetail4.date;
+            filmCategory4.innerHTML = filmDetail4.category;
+
+            filmName4.style.color = 'rgb(252, 67, 65)';
+            filmDate4.style.color = 'white';
+            filmCategory4.style.color = 'white';
+
+            // for mobile
+            filmNameM4.innerHTML = filmDetail4.name;
+            filmDateM4.innerHTML = filmDetail4.date;
+            filmCategoryM4.innerHTML = filmDetail4.category;
+
+            filmNameM4.style.color = 'rgb(252, 67, 65)';
+            filmDateM4.style.color = 'white';
+            filmCategoryM4.style.color = 'white';
+        })
+
+        box4.addEventListener('mouseleave',() => {
+            filmName4.innerHTML = nameText4;
+            filmDate4.innerHTML = dateText4;
+            filmCategory4.innerHTML = CategoryText4;
+
+            filmName4.style.color = 'white';
+            filmDate4.style.color = 'white';
+            filmCategory4.style.color = 'white';
+
+            // for mobile
+            filmNameM4.innerHTML = nameTextM4;
+            filmDateM4.innerHTML = dateTextM4;
+            filmCategoryM4.innerHTML = categoryTextM4;
+
+            filmNameM4.style.color = 'white';
+            filmDateM4.style.color = 'white';
+            filmCategoryM4.style.color = 'white';
+        })
+
+
+        // box5
+        let filmName5 = document.getElementById('movieName');
+        let filmDate5 = document.getElementById('movieDate');
+        let filmCategory5 = document.getElementById('movieCategory');
+        
+        let nameText5 = filmName5.textContent;
+        let dateText5 = filmDate5.textContent;
+        let CategoryText5 = filmCategory5.textContent;
+
+        let filmDetail5 = {name:'Movie Title: Call to Duty', date:'Date Released: 21/03/16', category:'Category: Action'};
+
+        box5.addEventListener('mousemove',() => {
+            filmName5.innerHTML = filmDetail5.name;
+            filmDate5.innerHTML = filmDetail5.date;
+            filmCategory5.innerHTML = filmDetail5.category;
+
+            filmName5.style.color = 'rgb(252, 67, 65)';
+            filmDate5.style.color = 'white';
+            filmCategory5.style.color = 'white';
+        })
+
+        box5.addEventListener('mouseleave',() => {
+            filmName5.innerHTML = nameText5;
+            filmDate5.innerHTML = dateText5;
+            filmCategory5.innerHTML = CategoryText5;
+
+            filmName5.style.color = 'white';
+            filmDate5.style.color = 'white';
+            filmCategory5.style.color = 'white';
+        })
+
+
+        // box6
+        let filmName6 = document.getElementById('movieName');
+        let filmDate6 = document.getElementById('movieDate');
+        let filmCategory6 = document.getElementById('movieCategory');
+        
+        let nameText6 = filmName6.textContent;
+        let dateText6 = filmDate6.textContent;
+        let CategoryText6 = filmCategory6.textContent;
+
+        let filmDetail6 = {name:'Movie Title: Hidden Fang', date:'Date Released: 21/12/20', category:'Category: Action'};
+
+        box6.addEventListener('mousemove',() => {
+            filmName6.innerHTML = filmDetail6.name;
+            filmDate6.innerHTML = filmDetail6.date;
+            filmCategory6.innerHTML = filmDetail6.category;
+
+            filmName6.style.color = 'rgb(252, 67, 65)';
+            filmDate6.style.color = 'white';
+            filmCategory6.style.color = 'white';
+        })
+
+        box6.addEventListener('mouseleave',() => {
+            filmName6.innerHTML = nameText6;
+            filmDate6.innerHTML = dateText6;
+            filmCategory6.innerHTML = CategoryText6;
+
+            filmName6.style.color = 'white';
+            filmDate6.style.color = 'white';
+            filmCategory6.style.color = 'white';
+        })
+
+
+        // box7
+        let filmName7 = document.getElementById('movieName');
+        let filmDate7 = document.getElementById('movieDate');
+        let filmCategory7 = document.getElementById('movieCategory');
+        
+        let nameText7 = filmName7.textContent;
+        let dateText7 = filmDate7.textContent;
+        let CategoryText7 = filmCategory7.textContent;
+
+        // box7 mobile
+        let filmNameM7 = document.getElementById('movieNameM');
+        let filmDateM7 = document.getElementById('movieDateM');
+        let filmCategoryM7 = document.getElementById('movieCategoryM');
+        
+        let nameTextM7 = filmNameM7.textContent;
+        let dateTextM7 = filmDateM7.textContent;
+        let categoryTextM7 = filmCategoryM7.textContent;
+
+
+        let filmDetail7 = {name:'Movie Title: The Unknown', date:'Date Released: 21/03/16', category:'Category: Mystery'};
+
+        box7.addEventListener('mousemove',() => {
+            filmName7.innerHTML = filmDetail7.name;
+            filmDate7.innerHTML = filmDetail7.date;
+            filmCategory7.innerHTML = filmDetail7.category;
+
+            filmName7.style.color = 'rgb(252, 67, 65)';
+            filmDate7.style.color = 'white';
+            filmCategory7.style.color = 'white';
+
+            // for mobile
+            filmNameM7.innerHTML = filmDetail7.name;
+            filmDateM7.innerHTML = filmDetail7.date;
+            filmCategoryM7.innerHTML = filmDetail7.category;
+
+            filmNameM7.style.color = 'rgb(252, 67, 65)';
+            filmDateM7.style.color = 'white';
+            filmCategoryM7.style.color = 'white';
+        })
+
+        box7.addEventListener('mouseleave',() => {
+            filmName7.innerHTML = nameText7;
+            filmDate7.innerHTML = dateText7;
+            filmCategory7.innerHTML = CategoryText7;
+
+            filmName7.style.color = 'white';
+            filmDate7.style.color = 'white';
+            filmCategory7.style.color = 'white';
+
+            // for mobile
+            filmNameM7.innerHTML = nameTextM7;
+            filmDateM7.innerHTML = dateTextM7;
+            filmCategoryM7.innerHTML = categoryTextM7;
+
+            filmNameM7.style.color = 'white';
+            filmDateM7.style.color = 'white';
+            filmCategoryM7.style.color = 'white';
+        })
+
+
+        // box8
+        let filmName8 = document.getElementById('movieName');
+        let filmDate8 = document.getElementById('movieDate');
+        let filmCategory8 = document.getElementById('movieCategory');
+        
+        let nameText8 = filmName8.textContent;
+        let dateText8 = filmDate8.textContent;
+        let CategoryText8 = filmCategory8.textContent;
+
+        // box8 mobile
+        let filmNameM8 = document.getElementById('movieNameM');
+        let filmDateM8 = document.getElementById('movieDateM');
+        let filmCategoryM8 = document.getElementById('movieCategoryM');
+        
+        let nameTextM8 = filmNameM8.textContent;
+        let dateTextM8 = filmDateM8.textContent;
+        let categoryTextM8 = filmCategoryM8.textContent;
+
+
+        let filmDetail8 = {name:'Movie Title: Serene', date:'Date Released: 21/03/16', category:'Category: Mystery'};
+
+        box8.addEventListener('mousemove',() => {
+            filmName8.innerHTML = filmDetail8.name;
+            filmDate8.innerHTML = filmDetail8.date;
+            filmCategory8.innerHTML = filmDetail8.category;
+
+            filmName8.style.color = 'rgb(252, 67, 65)';
+            filmDate8.style.color = 'white';
+            filmCategory8.style.color = 'white';
+
+            // for mobile
+            filmNameM8.innerHTML = filmDetail8.name;
+            filmDateM8.innerHTML = filmDetail8.date;
+            filmCategoryM8.innerHTML = filmDetail8.category;
+
+            filmNameM8.style.color = 'rgb(252, 67, 65)';
+            filmDateM8.style.color = 'white';
+            filmCategoryM8.style.color = 'white';
+        })
+
+        box8.addEventListener('mouseleave',() => {
+            filmName8.innerHTML = nameText8;
+            filmDate8.innerHTML = dateText8;
+            filmCategory8.innerHTML = CategoryText8;
+
+            filmName8.style.color = 'white';
+            filmDate8.style.color = 'white';
+            filmCategory8.style.color = 'white';
+
+            // for mobile
+            filmNameM8.innerHTML = nameTextM8;
+            filmDateM8.innerHTML = dateTextM8;
+            filmCategoryM8.innerHTML = categoryTextM8;
+
+            filmNameM8.style.color = 'white';
+            filmDateM8.style.color = 'white';
+            filmCategoryM8.style.color = 'white';
+        })
+
+
+        // box9
+        let filmName9 = document.getElementById('movieName');
+        let filmDate9 = document.getElementById('movieDate');
+        let filmCategory9 = document.getElementById('movieCategory');
+        
+        let nameText9 = filmName9.textContent;
+        let dateText9 = filmDate9.textContent;
+        let CategoryText9 = filmCategory9.textContent;
+
+        let filmDetail9 = {name:'Movie Title: Battle Angel', date:'Date Released: 21/07/18', category:'Category: Action'};
+
+        box9.addEventListener('mousemove',() => {
+            filmName9.innerHTML = filmDetail9.name;
+            filmDate9.innerHTML = filmDetail9.date;
+            filmCategory9.innerHTML = filmDetail9.category;
+
+            filmName9.style.color = 'rgb(252, 67, 65)';
+            filmDate9.style.color = 'white';
+            filmCategory9.style.color = 'white';
+        })
+
+        box9.addEventListener('mouseleave',() => {
+            filmName9.innerHTML = nameText9;
+            filmDate9.innerHTML = dateText9;
+            filmCategory9.innerHTML = CategoryText9;
+
+            filmName9.style.color = 'white';
+            filmDate9.style.color = 'white';
+            filmCategory9.style.color = 'white';
+        })
+    </script>
+</body>
+</html>
