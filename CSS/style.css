@@ -459,6 +459,9 @@ body{
         margin-top: 100px;
         margin-bottom: 30px;
     }
+    .side-nav ul li{
+        margin-left: 10px;
+    }
     .side-nav .end-info{
         width: 80%;
         position: absolute;
@@ -512,6 +515,8 @@ body{
     .side-nav .details{
         margin-top: 30px;
         margin-bottom: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
         font-size: 13px;
     }
     .side-nav ul{
@@ -530,6 +535,8 @@ body{
     .side-nav .end-info{
         font-size: 6px;
         bottom: 10px;
+        left: 10px;
+        margin-left: 0px;
     }
     .gallery .posters2{
         width: 55%;
